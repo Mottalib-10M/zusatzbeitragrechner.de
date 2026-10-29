@@ -5,6 +5,20 @@
    "datum": "2026-10-15",
    "art": "start",
    "anzahl": 92
+  },
+  {
+   "datum": "2026-10-29",
+   "id": "betriebskrankenkasse-der-g-m-pfaff-ag",
+   "name": "Betriebskrankenkasse der G.M. Pfaff AG",
+   "art": "oeffnung",
+   "alt": [
+    "RP"
+   ],
+   "neu": [
+    "RP",
+    "SH",
+    "TH"
+   ]
   }
  ]
 }

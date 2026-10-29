@@ -1,7 +1,7 @@
 {
  "_quelle": "https://www.gkv-spitzenverband.de/service/krankenkassenliste/krankenkassen.jsp",
  "_regel": "§ 242 Abs. 5 SGB V: tagesaktuelle Zusatzbeitragssätze; neue Sätze erscheinen erst am Tag ihrer Gültigkeit",
- "stand": "2026-10-15",
+ "stand": "2026-10-29",
  "anzahl": 92,
  "kassen": [
   {
@@ -233,7 +233,9 @@
    "zb_text": "2,78 %",
    "art": "regional",
    "laender": [
-    "RP"
+    "RP",
+    "SH",
+    "TH"
    ]
   },
   {
