@@ -112,9 +112,10 @@ export default function BeitragsRechner({ lang, preset = {}, methodHref, kassenH
           {status === 'selbststaendig' && <Toggle id="kg" label={tx(lang, 'Krankengeld absichern?', 'Insure sick pay?')} value={krankengeld ? '1' : '0'} onChange={(v) => setKrankengeld(v === '1')} options={[{ value: '0', label: tx(lang, 'Nein', 'No') }, { value: '1', label: tx(lang, 'Ja', 'Yes') }]} />}
         </form>
         <div className={`${kasten} lg:col-start-2 lg:row-span-2 lg:row-start-1`} data-resultat aria-live="polite">
-          <Kopf label={tx(lang, `Ihr Beitrag bei ${eigene.kurz}, ${jahr}`, `Your contribution at ${eigene.kurz}, ${jahr}`)} wert={f.eur(r.selbst)}
+          <Kopf label={tx(lang, `Ihr Beitrag bei ${eigene.kurz}, ${jahr}`, `Your contribution at ${eigene.kurz}, ${jahr}`)} wert={f.eur(r.selbst, 2)}
             unter={tx(lang, `im Monat · Zusatzbeitrag ${f.pz(eigene.zb ?? 0)}`, `a month · additional rate ${f.pz(eigene.zb ?? 0)}`)} />
           <Zeilen rows={rows} />
+          {jahr === 2027 && <p className="mt-2 text-xs text-navy-600">{tx(lang, 'Die Kassen legen ihre Zusatzbeiträge für 2027 erst zum Jahreswechsel fest: gerechnet wird mit den Sätzen von 2026 und den Rechengrößen 2027.', 'Funds set their 2027 additional rates only around the turn of the year: this uses the 2026 rates with the 2027 thresholds.')}</p>}
           {best && (
             <p className="mt-4 rounded-lg bg-white p-3 text-sm text-navy-800">
               {sparen > 0
