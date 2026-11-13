@@ -69,8 +69,8 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
     card: `${EN.pk(p.zb)} additional rate, ${istBilligste ? 'the lowest of all open funds' : `rank ${p.rangBund}`}; open in ${offenIn.length} states.`,
     title: 'BKK firmus Additional Contribution 2027: Who Can Join It',
     description: `BKK firmus additional rate in 2026: ${EN.pk(p.zb)}. Which German states this company fund is open in, your cost in euros, how much you save, and the outlook for 2027.`,
-    h1: 'BKK firmus: a low rate, but not open everywhere',
-    intro: `BKK firmus charges ${EN.pk(p.zb)} and is open in ${offenIn.length} of 16 states; in ${namen(nichtIn, 'en')} you cannot join it.`,
+    h1: 'BKK firmus: a low additional contribution, but not open everywhere',
+    intro: `BKK firmus charges an additional contribution of ${EN.pk(p.zb)} and is open in ${offenIn.length} of 16 states; in ${namen(nichtIn, 'en')} you cannot join it.`,
     resume: `BKK firmus is a company health fund (Betriebskrankenkasse) that has opened its statutes to ${offenIn.length} German states: ${namen(offenIn, 'en')}. Anyone who lives or works in one of them can join, whoever the employer is. According to the GKV-Spitzenverband list it charges an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)}${istBilligste ? ', the lowest of all funds open to the public anywhere' : `, rank ${p.rangBund} among ${p.nBund} open funds`}; that is ${EN.num(Math.abs(p.abstandDurchschnitt), 2)} points ${p.unterDurchschnitt ? 'below' : 'above'} the official average of ${EN.pz(w.zb_durchschnitt)}. On ${EN.eur(BEISPIEL.lohn)} gross with one child, employees pay ${EN.eur(p.lohn)} a month for health and care insurance, ${EN.eur(vsTk)} a year less than at Techniker Krankenkasse. Self-employed members with ${EN.eur(BEISPIEL.gewinn)} profit save ${EN.eur(selbstVsTk)} against TK, because they pay the whole additional rate themselves. The rate says nothing about service, branches or extra benefits.`,
     faqs: [
       { q: 'In which states can I join BKK firmus?', a: `According to the GKV-Spitzenverband list, in ${namen(offenIn, 'en')}. Living or working in one of them is enough. Someone who lives in ${LAND_NAME[nichtIn[0]].en} but works in one of those states can join through the workplace; the fund may not turn them down.` },
@@ -84,7 +84,7 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
 ${h.table(['State without BKK firmus', 'cheapest fund open', 'Additional rate'], ersatz.map((x) => [LAND_NAME[x.l].en, kLink(h, x.k), h.pk(x.k.zb!)]), 'GKV-Spitzenverband list', ['l', 'l', 'r'])}
 <h2>Home or workplace: what counts</h2>
 <p>Either place is enough. If you live in a state where the fund is not open but work across the border in one where it is, you can join through your workplace; for the self-employed and pensioners it is usually the home address that counts. If you move later, your membership continues even if the fund is not open at your new address, although a new membership would no longer be accepted there. Pick both states in the calculator above to compare the rankings.</p>
-<h2>What you pay at BKK firmus</h2>
+<h2>Your BKK firmus contribution</h2>
 ${h.table(['Situation', 'Base', 'Your share a month'], [
   ['Employee', h.eur(BEISPIEL.lohnNiedrig), h.eur(p.lohnNiedrig)],
   ['Employee', h.eur(BEISPIEL.lohn), h.eur(p.lohn)],

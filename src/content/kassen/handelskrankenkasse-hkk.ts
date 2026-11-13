@@ -66,7 +66,7 @@ ${h.table(['Gruppe', 'Bemessung', 'Ihr Anteil im Monat'], [
     title: 'hkk Additional Contribution 2027: Cost, Gap to the Top',
     description: `hkk Handelskrankenkasse additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost, which funds are cheaper still and whether you can join them everywhere, 2027 outlook.`,
     h1: 'hkk: additional rate and who is cheaper still',
-    intro: `hkk charges ${EN.pk(p.zb)}; only ${davor.length} open funds have a lower rate, ${davorBund.length} of them nationwide.`,
+    intro: `hkk charges an additional contribution of ${EN.pk(p.zb)}; only ${davor.length} open funds have a lower rate, ${davorBund.length} of them nationwide.`,
     resume: `Handelskrankenkasse, known as hkk, is a substitute fund (Ersatzkasse) that the GKV-Spitzenverband list shows as open in every state. With an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)} it is among the cheapest funds of all: only ${davor.length} of the ${p.nBund} funds open to everyone charge less, and of those ${davorRegional.length === 0 ? 'all are open nationwide' : `${davorRegional.length === 1 ? 'one is' : `${davorRegional.length} are`} open only regionally`}. ${billigsteEk ? 'Among the substitute funds it has the lowest rate.' : `Among the substitute funds, ${eks[0].kurz} is ahead of it.`} An employee on ${EN.eur(BEISPIEL.lohn)} gross with one child pays ${EN.eur(p.lohn)} a month at hkk for health and care insurance, ${EN.eur(Math.abs(p.proJahrVsDurchschnitt))} a year ${p.unterDurchschnitt ? 'less' : 'more'} than at the official average rate of ${EN.pz(w.zb_durchschnitt)}. The cheapest fund, ${p.billigste.kurz}, would cost another ${EN.eur(p.proJahrVsBilligste)} a year less at that pay. In ${besteRaenge.map((l) => LAND_NAME[l].en).join(', ')} hkk ranks ${bestLand[0].rang} among the funds open to the public, because fewer regional funds are open there.`,
     faqs: [
       { q: 'Is hkk the cheapest health fund?', a: `Not quite. ${davor.length} open funds have a lower additional rate, led by ${p.billigste.kurz} at ${EN.pk(p.billigste.zb!)}. On ${EN.eur(BEISPIEL.lohn)} gross you pay ${EN.eur(p.proJahrVsBilligste)} a year less there than at hkk. ${davorRegional.length ? 'Some of the cheaper funds, however, cannot be joined in every state.' : 'All the cheaper funds are open nationwide.'}` },
@@ -78,7 +78,7 @@ ${h.table(['Gruppe', 'Bemessung', 'Ihr Anteil im Monat'], [
 <h2>Who is ahead of hkk, and where you can join them</h2>
 <p>A low rate only helps if you are allowed to join. Regionally open funds accept only people living or working in certain states; hkk, by contrast, can be chosen anywhere. The table lists every open fund with a lower rate than hkk and where it is open.</p>
 ${h.table(['Fund', 'Additional rate', 'open in', 'You pay a month', 'vs hkk a year'], tab.map((x) => [x.k.id === ID ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), x.k.art === 'bundesweit' ? 'nationwide' : `${x.k.laender.length} states`, h.eur(x.lohn), x.k.id === ID ? '·' : `${x.lohn > me.lohn ? '+' : '−'}${h.eur(Math.abs(j(x)))}`]), `${h.eur(BEISPIEL.lohn)} gross, one child, 2026`, ['l', 'r', 'l', 'r', 'r'])}
-<h2>hkk cost for different groups</h2>
+<h2>hkk contribution for different groups</h2>
 ${h.table(['Group', 'Base', 'Your share a month'], [
   ['Employed', h.eur(BEISPIEL.lohnNiedrig), h.eur(p.lohnNiedrig)],
   ['Employed', h.eur(BEISPIEL.lohn), h.eur(p.lohn)],

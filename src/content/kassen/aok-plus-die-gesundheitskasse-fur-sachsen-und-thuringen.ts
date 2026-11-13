@@ -56,7 +56,7 @@ ${h.table(['Arbeitsort', 'Pflege, Ihr Anteil', 'Pflege, Arbeitgeber', 'Ihr Beitr
   ['Thüringen', h.eur(th.pv.mitglied), h.eur(th.pv.andere), h.eur(th.selbst)],
 ], `${h.eur(BEISPIEL.lohn)} brutto, ein Kind, AOK PLUS, 2026`, ['l', 'r', 'r', 'r'])}
 <p>Die Regel stammt aus dem Jahr 1995: Damit die Arbeitgeber durch den neuen Pflegebeitrag nicht belastet würden, strichen die Länder einen Feiertag, meist den Buß- und Bettag. Sachsen behielt ihn, und seitdem zahlen sächsische Beschäftigte den Ausgleich selbst. Im Rechner oben wird das berücksichtigt, sobald Sie Sachsen als Land wählen; Kinderlose ab 23 zahlen zusätzlich ${h.pz(w.pv_kinderlos)}. Mehr zur Pflege steht unter ${h.a('pflegeversicherung-beitrag', 'Beitrag zur Pflegeversicherung')}.</p>
-<h2>Bleiben oder wechseln?</h2>
+<h2>AOK PLUS: bleiben oder wechseln?</h2>
 <p>Gemessen am Preis liegt die AOK PLUS in Sachsen ${lageDe(rSN)} der wählbaren Kassen, in Thüringen ${lageDe(rTH)}. Für Beschäftigte mit ${h.eur(BEISPIEL.lohnNiedrig)} brutto beträgt der eigene Monatsbeitrag ${h.eur(p.lohnNiedrig)} ohne die sächsische Pflegeregel, an der Bemessungsgrenze ${h.eur(p.lohnBbg)}. Wer wechseln will, findet die günstigsten in Sachsen und Thüringen wählbaren Kassen in der ${h.a('zusatzbeitrag-liste', 'Liste aller Kassen nach Land')}. Der Wechsel wird zum Ende des übernächsten Monats wirksam; erhöht die AOK PLUS ihren Satz, entfällt die zwölfmonatige Bindung. Für Selbstständige mit ${h.eur(BEISPIEL.gewinn)} Gewinn kostet die AOK PLUS ${h.eur(p.selbst)} im Monat, für Studierende ${h.eur(p.student)}.</p>`,
   },
   en: {
@@ -66,7 +66,7 @@ ${h.table(['Arbeitsort', 'Pflege, Ihr Anteil', 'Pflege, Arbeitgeber', 'Ihr Beitr
     title: 'AOK PLUS Additional Contribution 2027: Saxony and Thuringia',
     description: `AOK PLUS additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost in Saxony and Thuringia, why Saxon employees pay more care insurance, ranking among both states’ funds.`,
     h1: 'AOK PLUS: additional rate in Saxony and Thuringia',
-    intro: `AOK PLUS charges ${EN.pk(p.zb)}; working in Saxony costs ${EN.eur(snMehrJahr)} a year more than in Thuringia because of care insurance.`,
+    intro: `AOK PLUS charges an additional contribution of ${EN.pk(p.zb)}; working in Saxony costs ${EN.eur(snMehrJahr)} a year more than in Thuringia because of care insurance.`,
     resume: `AOK PLUS is the joint regional health fund of Saxony (Sachsen) and Thuringia (Thüringen); the GKV-Spitzenverband list shows it with an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)}, open in exactly these two states. Health insurance costs the same in Leipzig and Erfurt, care insurance does not: in 1995 Saxony was the only state that kept all its public holidays when long-term care insurance began, so employees there pay ${EN.pz(w.pv_sachsen_an_mehr)} more and employers that much less (section 58(3) SGB XI). On ${EN.eur(BEISPIEL.lohn)} gross with one child, a member working in Saxony pays ${EN.eur(sn.selbst)} a month, one working in Thuringia ${EN.eur(th.selbst)}. The place of work counts, not the home address. Among the ${aoks.length} AOKs, AOK PLUS has the ${ordEn(aokPlatz)} lowest rate. In Saxony ${rSN.rang - 1} open funds are cheaper, in Thuringia ${rTH.rang - 1}. Against the official average of ${EN.pz(w.zb_durchschnitt)} it costs ${EN.eur(Math.abs(p.proJahrVsDurchschnitt))} a year ${p.unterDurchschnitt ? 'less' : 'more'} at that pay.`,
     faqs: [
       { q: 'Why do I pay more at AOK PLUS in Saxony than a colleague in Thuringia?', a: `Not because of the fund but because of where you work. Saxony has a special care insurance split: employees carry ${EN.pz(w.pv_satz / 2 + w.pv_sachsen_an_mehr)} instead of ${EN.pz(w.pv_satz / 2)}. On ${EN.eur(BEISPIEL.lohn)} gross that is ${EN.eur(snMehrJahr)} a year. Employers in Saxony pay exactly that much less, so the total stays the same.` },
@@ -84,7 +84,7 @@ ${h.table(['Place of work', 'Care, your share', 'Care, employer', 'Your total'],
   ['Thuringia', h.eur(th.pv.mitglied), h.eur(th.pv.andere), h.eur(th.selbst)],
 ], `${h.eur(BEISPIEL.lohn)} gross, one child, AOK PLUS, 2026`, ['l', 'r', 'r', 'r'])}
 <p>The rule dates from 1995: to spare employers the cost of the new care contribution, the states scrapped a public holiday, mostly the Day of Repentance and Prayer (Buß- und Bettag). Saxony kept it, and Saxon employees have paid the difference themselves ever since. The calculator above applies this as soon as you pick Saxony; childless members aged 23 and over add ${h.pz(w.pv_kinderlos)}. More under ${h.a('pflegeversicherung-beitrag', 'care insurance contributions')}.</p>
-<h2>Stay or switch?</h2>
+<h2>AOK PLUS contribution: stay or switch?</h2>
 <p>On price, AOK PLUS sits ${lageEn(rSN)} of the funds open in Saxony and ${lageEn(rTH)} in Thuringia. Employees on ${h.eur(BEISPIEL.lohnNiedrig)} gross pay ${h.eur(p.lohnNiedrig)} a month without the Saxon care rule, ${h.eur(p.lohnBbg)} at the ceiling. If you want to move, the cheapest funds open to you in Saxony and Thuringia are in the ${h.a('zusatzbeitrag-liste', 'list of every fund by state')}. A switch takes effect at the end of the month after next; if AOK PLUS raises its rate, the twelve-month lock-in falls away. A self-employed member with ${h.eur(BEISPIEL.gewinn)} profit pays ${h.eur(p.selbst)} a month at AOK PLUS, a student ${h.eur(p.student)}.</p>`,
   },
 });

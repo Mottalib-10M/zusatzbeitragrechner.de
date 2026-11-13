@@ -65,7 +65,7 @@ ${h.table(['Ersatzkasse', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber K
     title: 'KKH Additional Contribution 2027: Maximum Cost in Euros',
     description: `KKH additional rate in 2026: ${EN.pk(p.zb)}. What employees pay up to the maximum, voluntary members above the compulsory threshold, 2027 outlook and the gap to hkk.`,
     h1: 'KKH: additional rate and the maximum for high earners',
-    intro: `KKH charges ${EN.pk(p.zb)}; earn more than ${EN.eur(w.bbgKv, 2)} gross and you pay ${EN.eur(hoch26.selbst)} a month there, likely ${EN.eur(hoch27.selbst)} in 2027.`,
+    intro: `KKH charges an additional contribution of ${EN.pk(p.zb)}; earn more than ${EN.eur(w.bbgKv, 2)} gross and you pay ${EN.eur(hoch26.selbst)} a month there, likely ${EN.eur(hoch27.selbst)} in 2027.`,
     resume: `Kaufmännische Krankenkasse, known as KKH, is a substitute fund (Ersatzkasse) open nationwide. According to the GKV-Spitzenverband list it charges an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)}, ${EN.num(Math.abs(p.abstandDurchschnitt), 2)} points ${p.unterDurchschnitt ? 'below' : 'above'} the official average of ${EN.pz(w.zb_durchschnitt)}. Of the ${eks.length} substitute funds it is number ${ekRang} on price, and it ranks ${p.rangBund} of all ${p.nBund} open funds. On ${EN.eur(BEISPIEL.lohn)} gross with one child you pay ${EN.eur(p.lohn)} a month. The rate shows most on high salaries: if you earn above the compulsory insurance threshold of ${EN.eur(w.jaeg_jahr)} a year and stay in statutory insurance voluntarily, KKH charges the maximum of ${EN.eur(hoch26.selbst)} a month, and your employer pays the same subsidy as for compulsory members. At the cheapest substitute fund, hkk, it would be ${EN.eur(sparHoch)} a year less. In 2027 the ceiling rises to ${EN.eur(w27.bbgKv)} a month under the cabinet decision, taking the maximum to ${EN.eur(hoch27.selbst)} at the same rate.`,
     faqs: [
       { q: 'What is the maximum contribution at KKH?', a: `In 2026, ${EN.eur(hoch26.selbst)} a month for your share of health and care insurance, with one child, from gross pay of ${EN.eur(w.bbgKv, 2)}. Nothing rises above that. For 2027 expect ${EN.eur(hoch27.selbst)} if KKH keeps its rate, because the health ceiling goes up by ${EN.eur(Math.round(w27.bbgKv - w.bbgKv))} a month.` },
@@ -74,7 +74,7 @@ ${h.table(['Ersatzkasse', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber K
       { q: 'What do KKH members pay in retirement?', a: `On a ${EN.eur(BEISPIEL.rente)} state pension, ${EN.eur(p.rente)} a month for health and care insurance; the pension insurance pays the other half of health insurance. A change in KKH’s rate reaches the pension only from the second month after it. Company pensions above the allowance pay the full rate.` },
     ],
     body: (h) => `
-<h2>High earners at KKH: the maximum in figures</h2>
+<h2>High earners at KKH: the maximum contribution in figures</h2>
 <p>Below the contribution ceiling the contribution grows with every euro of pay; above it, it stops. High earners therefore pay a fixed maximum at every fund, and that is where the difference between two funds is greatest. At KKH, with its ${h.pk(p.zb)} additional rate, the figures look like this:</p>
 ${h.table(['Monthly pay', 'Year', 'Your share at KKH', 'at hkk'], [
   [h.eur(BEISPIEL.lohn), '2026', h.eur(p.lohn), h.eur(hkk.lohn)],

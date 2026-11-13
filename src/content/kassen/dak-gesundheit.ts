@@ -65,7 +65,7 @@ ${h.table(['Gruppe', 'Bemessung', 'Beitrag im Monat'], [
     title: 'DAK Additional Contribution 2027: What Members Pay Monthly',
     description: `DAK-Gesundheit additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost for employees, students, pensioners and the self-employed, the gap to BARMER and TK, 2027 outlook.`,
     h1: 'DAK-Gesundheit: additional rate and monthly contribution',
-    intro: `DAK-Gesundheit charges ${EN.pk(p.zb)}; an employee on ${EN.eur(BEISPIEL.lohn)} gross pays ${EN.eur(p.lohn)} a month, students ${EN.eur(p.student)}.`,
+    intro: `DAK-Gesundheit charges an additional contribution of ${EN.pk(p.zb)}; an employee on ${EN.eur(BEISPIEL.lohn)} gross pays ${EN.eur(p.lohn)} a month, students ${EN.eur(p.student)}.`,
     resume: `The GKV-Spitzenverband fund list gives DAK-Gesundheit an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)}. An employee insured there pays half of ${EN.pz(w.kv_allgemein + p.zb)} of gross pay for health insurance and half of ${EN.pz(w.pv_satz)} for long-term care insurance; the employer pays the rest. On ${EN.eur(BEISPIEL.lohn)} gross with one child that adds up to ${EN.eur(p.lohn)} a month. Students pay ${EN.eur(p.student)} however much they earn on the side, because the law ties their contribution to the BAföG need rate. Compared with the official average rate of ${EN.pz(w.zb_durchschnitt)}, DAK costs ${EN.eur(Math.abs(p.proJahrVsDurchschnitt))} a year ${p.unterDurchschnitt ? 'less' : 'more'} at ${EN.eur(BEISPIEL.lohn)}; compared with ${p.billigste.kurz}, the cheapest fund open to everyone, ${EN.eur(zuBillig)} more. It ranks ${p.rangBund} of ${p.nBund}. Like every substitute fund (Ersatzkasse), it accepts members from all states, and moving house simply leaves the membership in place.`,
     faqs: [
       { q: 'How much do students pay at DAK-Gesundheit?', a: `${EN.eur(p.student)} a month if they are under 23 or have children, ${EN.eur(stud23)} if childless and 23 or over. The base is the BAföG need rate of ${EN.eur(w.bafoeg_bedarf)}, charged at seven tenths of the general rate, so ${EN.pz(w.kvStudent)}, plus DAK’s full additional rate. A minijob on the side changes nothing.` },
@@ -77,7 +77,7 @@ ${h.table(['Gruppe', 'Bemessung', 'Beitrag im Monat'], [
 <h2>DAK-Gesundheit next to TK, BARMER and KKH</h2>
 <p>All four funds in the table are substitute funds open nationwide, so any employee can join, whether in Kiel or Konstanz. The gap between them comes only from the additional rate, because the general rate of ${h.pz(w.kv_allgemein)} and care insurance are the same everywhere. For DAK-Gesundheit, ${h.pk(p.zb)} means that ${p.rangBund - 1} of the ${p.nBund} open funds are cheaper. The comparison matters most to higher earners, since the gap grows with pay up to the ceiling of ${h.eur(w.bbgKv, 2)}; there you pay ${h.eur(p.lohnBbg)} a month at DAK.</p>
 ${h.table(['Fund', 'Additional rate', 'You pay a month', 'vs DAK a year'], nachbarn.map((x) => [x.k.id === 'dak-gesundheit' ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === 'dak-gesundheit' ? '·' : `${x.lohn > p.lohn ? '+' : '−'}${h.eur(Math.abs(d(x)))}`]), `${h.eur(BEISPIEL.lohn)} gross, one child, 2026`, ['l', 'r', 'r', 'r'])}
-<h2>Students, pensioners, the self-employed: DAK cost by group</h2>
+<h2>Students, pensioners, the self-employed: DAK contribution by group</h2>
 ${h.table(['Group', 'Base', 'Contribution a month'], [
   ['Student under 23', h.eur(w.bafoeg_bedarf), h.eur(p.student)],
   ['Student, childless, 23+', h.eur(w.bafoeg_bedarf), h.eur(stud23)],

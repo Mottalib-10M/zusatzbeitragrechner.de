@@ -72,7 +72,7 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
     title: 'AOK Nordost Additional Contribution 2027: Berlin and the NE',
     description: `AOK Nordost additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost in Berlin, Brandenburg and Mecklenburg-Western Pomerania, the cheaper option in each state, deadlines.`,
     h1: 'AOK Nordost: additional rate in Berlin, Brandenburg and MV',
-    intro: `AOK Nordost charges ${EN.pk(p.zb)}${teuersteAok ? ', the highest rate of any AOK' : ''}; on ${EN.eur(BEISPIEL.lohn)} gross you pay ${EN.eur(p.lohn)} a month.`,
+    intro: `AOK Nordost charges an additional contribution of ${EN.pk(p.zb)}${teuersteAok ? ', the highest rate of any AOK' : ''}; on ${EN.eur(BEISPIEL.lohn)} gross you pay ${EN.eur(p.lohn)} a month.`,
     resume: `AOK Nordost is the regional health fund for Berlin, Brandenburg and Mecklenburg-Western Pomerania, and the GKV-Spitzenverband list shows it open in exactly those three states. Its additional contribution (Zusatzbeitrag) is ${EN.pk(p.zb)}; ${teuersteAok ? `none of the other ${aoks.length - 1} AOKs charges more` : `it ranks ${ordEn(aokPlatz)} of the ${aoks.length} AOKs`}. For a member on ${EN.eur(BEISPIEL.lohn)} gross with one child that means ${EN.eur(p.lohn)} a month for health and care insurance, ${EN.eur(Math.abs(p.proJahrVsDurchschnitt))} a year ${p.unterDurchschnitt ? 'less' : 'more'} than at the official average rate of ${EN.pz(w.zb_durchschnitt)}. In the rankings of funds open to the public it stands as follows: ${listeEn}. The possible gain from switching differs by state, because not every cheap company fund is open in all three; Berlin has the widest choice. ${billigsteAok.k.id !== ID && !billigsteAok.k.laender.includes('BE') ? `The AOK with the lowest rate, ${billigsteAok.k.kurz}, would be ${EN.eur(abstandAok)} a year cheaper at that pay, but Berliners cannot join it.` : ''}`,
     faqs: [
       { q: 'How much do I save in Berlin by leaving AOK Nordost?', a: (() => { const b = proLand.find((x) => x.l === 'BE')!; return `The cheapest fund open in Berlin is ${b.best.kurz} at ${EN.pk(b.best.zb!)}. On ${EN.eur(BEISPIEL.lohn)} gross you pay ${EN.eur(b.spar)} a year less there than at AOK Nordost, and correspondingly more with higher pay up to the ceiling. ${b.n} funds are open to Berlin residents.`; })() },
@@ -84,7 +84,7 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
 <h2>Three states, three different rankings</h2>
 <p>AOK Nordost charges the same rate in Berlin, Brandenburg and Mecklenburg-Western Pomerania, but the competition is not the same everywhere. Regional company funds often open to individual states only; Berlin benefits from this more than the rural north-east. The table shows, for each of the three states, the AOK’s position, the cheapest fund open there and the difference on ${h.eur(BEISPIEL.lohn)} gross with one child.</p>
 ${h.table(['State', 'AOK Nordost rank', 'cheapest open fund', 'Rate', 'less a year'], proLand.map((x) => [LAND_NAME[x.l].en, `${x.rang} of ${x.n}`, kLink(h, x.best), h.pk(x.best.zb!), h.eur(x.spar)]), 'GKV-Spitzenverband list, amounts from the calculator', ['l', 'r', 'l', 'r', 'r'])}
-<h2>What AOK Nordost costs</h2>
+<h2>What you pay in AOK Nordost contributions</h2>
 ${h.table(['Situation', 'Base', 'Your share a month'], [
   ['Employed', h.eur(BEISPIEL.lohnNiedrig), h.eur(p.lohnNiedrig)],
   ['Employed', h.eur(BEISPIEL.lohn), h.eur(p.lohn)],

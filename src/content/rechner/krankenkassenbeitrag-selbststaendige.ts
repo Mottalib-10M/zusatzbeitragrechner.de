@@ -37,7 +37,7 @@ export default defineGuide({
       { q: 'Wie viel spare ich als Selbstständiger mit einer günstigeren Kasse?', a: `Den ganzen Unterschied im Zusatzbeitrag, nicht nur die Hälfte: Bei ${DE.eur(3000)} Gewinn liegen zwischen ${billig.kurz} (${DE.pk(billig.zb!)}) und ${teuer.kurz} (${DE.pk(teuer.zb!)}) ${DE.eur(spanne3000)} im Jahr. Am Höchstbeitrag ist es noch mehr, weil der Zusatzbeitrag bis zur Grenze mitwächst.` },
     ],
     body: (h) => `
-<h2>Beitrag nach Gewinn, mit durchschnittlichem Zusatzbeitrag</h2>
+<h2>Krankenkassenbeitrag nach Gewinn, mit durchschnittlichem Zusatzbeitrag</h2>
 ${h.table(['Gewinn im Monat', 'Grundlage', 'ohne Krankengeld', 'mit Krankengeld'], gewinne.map((g) => [h.eur(g), h.eur(s(g).basisKv, 2), h.eur(s(g).selbst), h.eur(s(g, true).selbst)]), `2026, Zusatzbeitrag ${h.pz(zbD)}, Pflege mit Kind, Kranken- und Pflegeversicherung zusammen`, ['r', 'r', 'r', 'r'])}
 <h2>Was als Einkommen zählt</h2>
 <p>Für freiwillige Mitglieder zählt die gesamte wirtschaftliche Leistungsfähigkeit: der Gewinn aus selbstständiger Arbeit, aber auch Mieteinnahmen, Kapitalerträge und Renten. Die Kasse liest diese Beträge aus dem Einkommensteuerbescheid und teilt sie durch zwölf. Wer neben der Selbstständigkeit angestellt ist, ist in der Regel über die Beschäftigung pflichtversichert, solange die Selbstständigkeit nicht hauptberuflich ist; dann zahlt man auf den Lohn wie jeder Beschäftigte. Mehr zur freiwilligen Mitgliedschaft im Allgemeinen: ${h.a('freiwillig-versichert', 'freiwillig versichert')}.</p>
@@ -65,7 +65,7 @@ ${h.table(['', '2026', '2027 (vorläufig)'], [['Mindestbemessung im Monat', h.eu
 ${h.table(['Monthly profit', 'Base', 'without sick pay', 'with sick pay'], gewinne.map((g) => [h.eur(g), h.eur(s(g).basisKv, 2), h.eur(s(g).selbst), h.eur(s(g, true).selbst)]), `2026, additional rate ${h.pz(zbD)}, care with one child, health and care together`, ['r', 'r', 'r', 'r'])}
 <h2>What counts as income</h2>
 <p>For voluntary members the fund looks at total economic capacity: profit from self-employment, but also rental and investment income and pensions. It reads these from your income tax assessment and divides by twelve. If you are also employed, you are usually covered compulsorily through the job as long as self-employment is not your main occupation; you then pay on your wages like any employee. More on voluntary membership in general: ${h.a('freiwillig-versichert', 'voluntary membership')}.</p>
-<h2>Limits for 2026 and 2027</h2>
+<h2>Health insurance limits for the self-employed, 2026 and 2027</h2>
 ${h.table(['', '2026', '2027 (provisional)'], [['Minimum base a month', h.eur(w.mindestFreiwillig, 2), h.eur(w7.mindestFreiwillig, 2)], ['Contribution ceiling a month', h.eur(w.bbgKv, 2), h.eur(w7.bbgKv, 2)], ['Minimum without sick pay', h.eur(mind.selbst), h.eur(mind7.selbst)], ['Maximum without sick pay', h.eur(max.selbst), h.eur(max7.selbst)]], 'At the average additional rate, care with one child; 2027 per the cabinet decision on reference values', ['l', 'r', 'r'])}
 <p>The maximum rises faster than wages in 2027 because the 2026 contribution stabilisation act lifts the ceiling by an extra ${h.eur(3600)} a year, once. For care insurance the ceiling stays at ${h.eur(w7.bbgPv)} a month under current law (${h.a('beitragsbemessungsgrenze', 'more on the contribution ceiling')}).</p>`,
   },

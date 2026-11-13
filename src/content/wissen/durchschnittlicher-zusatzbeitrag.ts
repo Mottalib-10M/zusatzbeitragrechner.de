@@ -32,8 +32,8 @@ export default defineGuide({
     card: `${DE.pz(w26.zb_durchschnitt, 1)} für 2026, festgelegt ${DE.pz(w27.zb_durchschnitt, 1)} für 2027: wofür der amtliche Satz gilt und warum Ihre Kasse davon abweicht.`,
     title: 'Durchschnittlicher Zusatzbeitrag 2027: Wert und Zweck',
     description: `Durchschnittlicher Zusatzbeitrag 2026 und 2027: ${DE.pz(w26.zb_durchschnitt, 1)} laut Bundesanzeiger, wie das Ministerium ihn herleitet, wofür er gilt und was Sie bei Ihrer Kasse zahlen.`,
-    h1: 'Der durchschnittliche Zusatzbeitragssatz: was er ist und was nicht',
-    intro: `${DE.pz(w26.zb_durchschnitt, 1)} für 2026, vom Ministerium ebenso für 2027 festgelegt. Gezahlt wird er nur von wenigen Gruppen; alle anderen zahlen den Satz ihrer Kasse.`,
+    h1: 'Durchschnittlicher Zusatzbeitrag: was er ist und was nicht',
+    intro: `Durchschnittlich ${DE.pz(w26.zb_durchschnitt, 1)} Zusatzbeitrag für 2026, vom Ministerium ebenso für 2027 festgelegt. Gezahlt wird er nur von wenigen Gruppen; alle anderen zahlen den Satz ihrer Kasse.`,
     resume: `Der durchschnittliche Zusatzbeitragssatz beträgt 2026 ${DE.pz(w26.zb_durchschnitt, 1)}; das Bundesgesundheitsministerium hat ihn am 10. November 2025 im Bundesanzeiger bekannt gemacht, und für 2027 hat es nach der Schätzung vom 14. Oktober 2026 am 30. Oktober 2026 denselben Wert festgelegt. Er entsteht nach § 242a SGB V aus einer einfachen Division: die erwarteten Ausgaben der Kassen minus das, was der Gesundheitsfonds ihnen zuweist, geteilt durch die beitragspflichtigen Einnahmen aller Mitglieder. Für 2027 sind das ${DE.num(S.luecke_mrd, 1)} durch ${DE.num(S.bpe_mrd, 1)} Milliarden Euro. Der Satz ist kein Mittelwert dessen, was die Kassen verlangen: Heute liegen ${darueber} von ${st.n} frei wählbaren Kassen darüber, der einfache Mittelwert aller Sätze beträgt ${DE.pz(st.mittel, 2)}. Direkt zahlen ihn nur Bezieher von Grundsicherungsgeld, Menschen in Werkstätten und einige andere Gruppen. Indirekt wirkt er überall: beim Zuschuss für Privatversicherte, bei Minijobs ab 2027 und bei Midijobs.`,
     faqs: [
       { q: 'Muss ich den durchschnittlichen Zusatzbeitrag zahlen oder den meiner Kasse?', a: `Als Beschäftigter, Rentner, Selbstständiger oder Student zahlen Sie den Satz Ihrer Kasse, wie er in der Liste des GKV-Spitzenverbands steht. Den Durchschnittssatz von ${DE.pz(w26.zb_durchschnitt, 1)} zahlen nur die Gruppen aus § 242 Abs. 3 SGB V, etwa Bezieher von Grundsicherungsgeld oder Auszubildende mit sehr geringer Vergütung, für die ohnehin jemand anderes den Beitrag trägt.` },
@@ -53,7 +53,7 @@ ${h.table(['', '2027'], [
   ['= rechnerischer Satz', h.pz((S.luecke_mrd / S.bpe_mrd) * 100, 2)],
 ], undefined, ['l', 'r'])}
 <p>Das Ministerium rundet und veröffentlicht das Ergebnis. Für 2026 war es ${h.pz(w26.zb_durchschnitt, 1)} (${h.src('banzZb2026', 'BAnz AT 10.11.2025 B7')}); für 2027 hat das Ministerium am 30. Oktober 2026 erneut ${h.pz(w27.zb_durchschnitt, 1)} festgelegt (${h.src('bmgZb2027', 'Pressemitteilung des BMG')}).</p>
-<h2>Wer genau diesen Satz zahlt</h2>
+<h2>Wer genau den durchschnittlichen Zusatzbeitrag zahlt</h2>
 <p>Für eine kleine Gruppe ist der Durchschnitt tatsächlich der Satz auf dem Bescheid. § 242 Abs. 3 SGB V zählt sie auf: Bezieher von Grundsicherungsgeld, Menschen in Leistungen zur Teilhabe am Arbeitsleben, Beschäftigte in Werkstätten für behinderte Menschen, deren Entgelt den Mindestbetrag nicht übersteigt, Mitglieder, die Verletztengeld oder vergleichbare Leistungen beziehen, und Beschäftigte, für die der Arbeitgeber den Beitrag allein trägt, also Auszubildende mit sehr geringer Vergütung und Freiwillige im Jugend- oder Bundesfreiwilligendienst. Für sie spielt die Wahl der Kasse beim Preis keine Rolle, weil jede Kasse denselben Satz ansetzen muss.</p>
 <h2>Wo er sonst steckt</h2>
 ${h.table(['Verwendung', '2026', '2027 (vorläufig)'], [
@@ -78,7 +78,7 @@ ${h.table(['Verwendung', '2026', '2027 (vorläufig)'], [
     title: 'Average Additional Contribution 2027: Value and Purpose',
     description: `Average additional contribution in German health insurance 2026 and 2027: ${EN.pz(w26.zb_durchschnitt, 1)} per the Federal Gazette, how it is derived, what it applies to, what you pay.`,
     h1: 'The average additional contribution rate: what it is and is not',
-    intro: `${EN.pz(w26.zb_durchschnitt, 1)} for 2026, and the ministry has set the same for 2027. Only a few groups actually pay it; everyone else pays their own fund’s rate.`,
+    intro: `An average additional contribution of ${EN.pz(w26.zb_durchschnitt, 1)} for 2026, and the ministry has set the same for 2027. Only a few groups actually pay it; everyone else pays their own fund’s rate.`,
     resume: `The average additional contribution rate (durchschnittlicher Zusatzbeitragssatz) is ${EN.pz(w26.zb_durchschnitt, 1)} for 2026; the Federal Health Ministry announced it in the Federal Gazette on 10 November 2025, and after the estimate of 14 October 2026 it set the same figure for 2027 on 30 October 2026. It comes from a simple division set out in section 242a of Book V of the Social Code: funds’ expected spending minus what the central health fund allocates to them, divided by all members’ contributory income. For 2027 that is ${EN.num(S.luecke_mrd, 1)} over ${EN.num(S.bpe_mrd, 1)} billion euros. It is not an average of what funds charge: today ${darueber} of ${st.n} open funds are above it, and the simple mean of all rates is ${EN.pz(st.mittel, 2)}. Only people on basic income support, workers in sheltered workshops and a few other groups pay it directly. It matters indirectly everywhere: for the employer subsidy to private insurance, for minijobs from 2027 and for midijobs.`,
     faqs: [
       { q: 'Do I pay the average additional rate or my fund’s rate?', a: `As an employee, pensioner, self-employed member or student you pay your own fund’s rate, as shown in the GKV-Spitzenverband list. The average of ${EN.pz(w26.zb_durchschnitt, 1)} is paid only by the groups in section 242(3) SGB V, such as people on basic income support or apprentices on very low pay, whose contributions someone else pays anyway.` },
@@ -98,7 +98,7 @@ ${h.table(['', '2027'], [
   ['= rate on paper', h.pz((S.luecke_mrd / S.bpe_mrd) * 100, 2)],
 ], undefined, ['l', 'r'])}
 <p>The ministry rounds and publishes the result. For 2026 it was ${h.pz(w26.zb_durchschnitt, 1)} (${h.src('banzZb2026', 'Federal Gazette, 10 November 2025')}); for 2027 the ministry set ${h.pz(w27.zb_durchschnitt, 1)} again on 30 October 2026 (${h.src('bmgZb2027', 'ministry press release')}).</p>
-<h2>Who pays exactly this rate</h2>
+<h2>Who pays exactly the average additional contribution</h2>
 <p>For a small group the average really is the rate on the bill. Section 242(3) SGB V lists them: people on basic income support (Grundsicherungsgeld), people in vocational rehabilitation, workers in sheltered workshops whose pay does not exceed the minimum amount, members receiving injury benefit or similar payments, and employees whose contribution the employer pays alone, meaning apprentices on very low pay and volunteers in the youth or federal volunteer service. For them the choice of fund makes no difference on price, because every fund must apply the same rate.</p>
 <h2>Where else it turns up</h2>
 ${h.table(['Use', '2026', '2027 (provisional)'], [

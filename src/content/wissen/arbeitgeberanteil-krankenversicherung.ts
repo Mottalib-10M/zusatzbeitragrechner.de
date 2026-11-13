@@ -78,7 +78,7 @@ ${h.table(['Kasse', 'Zusatzbeitrag', 'Arbeitgeber im Monat', 'im Jahr'], reihe.m
       { q: 'Does the employer pay more than half in a midijob?', a: `Yes. In the transition zone your share is reduced, but the total contribution is not reduced as much; the employer covers the difference. On ${EN.eur(1200)} gross and the average additional rate it pays ${EN.eur(midi.kv.andere + midi.pv.andere)} for health and care insurance, and you pay ${EN.eur(midi.selbst)}.` },
     ],
     body: (h) => `
-<h2>What makes up the employer share</h2>
+<h2>What makes up the employer share of health insurance</h2>
 <p>For employees the principle is parity: what goes to the health fund is shared between employee and employer. The general rate of ${h.pz(w.kv_allgemein)} is the same at every fund, so every employer pays ${h.pz(w.kv_allgemein / 2)} of gross pay for it. On top comes half of the additional rate of the fund the employee has chosen. For long-term care insurance the employer shares the ${h.pz(w.pv_satz)} rate; anything above or below that concerns only the employee. A childless employee on ${h.eur(LOHN)} gross pays ${h.eur(kinderlos.an)} a month and an employee with one child ${h.eur(normal.an)}; the employer pays ${h.eur(normal.ag)} in both cases.</p>
 <p>All contributions stop at the contribution ceiling. Above it the employer share no longer rises either: at most ${h.eur(maxAg26)} a month in 2026 and provisionally ${h.eur(maxAg27)} in 2027, for health and care insurance together at the average additional rate.</p>
 <h2>What the employer pays at different pay levels</h2>

@@ -47,7 +47,7 @@ export default defineGuide({
 <h2>Vom Innungsbetrieb zur offenen Kasse</h2>
 <p>Innungskrankenkassen bilden eine eigene Kassenart neben AOK, Betriebs- und Ersatzkassen. Ihr Ursprung liegt bei den Handwerksinnungen, doch die Bindung an einen Betrieb ist für die großen IKKs längst Geschichte: Die IKK classic nimmt jeden auf, gleich in welchem Land er wohnt. Wer als Angestellter in einem Handwerksbetrieb arbeitet, kann deshalb frei zwischen allen geöffneten Kassen wählen, und der Betrieb hat darauf keinen Einfluss. Im Preis unterscheiden sich die Innungskrankenkassen untereinander deutlich, wie die Tabelle für einen Beschäftigten mit ${h.eur(BEISPIEL.lohn)} brutto zeigt.</p>
 ${h.table(['Innungskrankenkasse', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber IKK classic im Jahr'], ikks.map((x) => [x.k.id === ID ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === ID ? '·' : `${x.lohn > me.lohn ? '+' : '−'}${h.eur(Math.abs(j(x)))}`]), 'Alle IKKs der Liste, ein Kind, 2026', ['l', 'r', 'r', 'r'])}
-<h2>Beitrag für Selbstständige und Beschäftigte</h2>
+<h2>Beitrag bei der IKK classic für Selbstständige und Beschäftigte</h2>
 ${h.table(['Mitglied', 'Grundlage', 'Eigener Beitrag im Monat'], [
   ['Selbstständig, Mindestbemessung, ohne Krankengeld', h.eur(w.mindestFreiwillig, 2), h.eur(minSelbst)],
   ['Selbstständig, ohne Krankengeld', h.eur(BEISPIEL.gewinn), h.eur(p.selbst)],
@@ -67,7 +67,7 @@ ${h.table(['Mitglied', 'Grundlage', 'Eigener Beitrag im Monat'], [
     title: 'IKK classic Additional Contribution 2027: Trades and More',
     description: `IKK classic additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost for employees and self-employed tradespeople, with and without sick pay, compared with the other IKKs.`,
     h1: 'IKK classic: additional rate for employees and master craftsmen',
-    intro: `IKK classic charges ${EN.pk(p.zb)}; a self-employed tradesperson on ${EN.eur(BEISPIEL.gewinn)} profit pays ${EN.eur(meisterKg)} a month with sick pay.`,
+    intro: `IKK classic charges an additional contribution of ${EN.pk(p.zb)}; a self-employed tradesperson on ${EN.eur(BEISPIEL.gewinn)} profit pays ${EN.eur(meisterKg)} a month with sick pay.`,
     resume: `IKK classic is a guild health fund (Innungskrankenkasse), one that grew out of the health funds of the craft guilds; today the GKV-Spitzenverband list shows it open nationwide to everyone. Its additional contribution (Zusatzbeitrag) is ${EN.pk(p.zb)}, ${EN.num(Math.abs(p.abstandDurchschnitt), 2)} points ${p.unterDurchschnitt ? 'below' : 'above'} the official average of ${EN.pz(w.zb_durchschnitt)}. Of the ${ikks.length} guild funds in the list it is number ${ikkRang} on price, and it ranks ${p.rangBund} of all ${p.nBund} open funds. For a journeyman on ${EN.eur(BEISPIEL.lohn)} gross with one child that means ${EN.eur(p.lohn)} a month out of pay. The rate hits the self-employed harder: they pay the additional rate and care insurance alone, ${EN.eur(meisterKg)} a month on ${EN.eur(BEISPIEL.gewinn)} profit with statutory sick pay and ${EN.eur(p.selbst)} without it. Someone with profit at the contribution ceiling who moves to the cheapest fund open to all saves ${EN.eur(meisterSpar)} a year. That figure does not measure benefits or service for businesses. The calculator above starts in self-employed mode and switches to employees, pensioners or students.`,
     faqs: [
       { q: 'Do I have to work in a trade to join IKK classic?', a: `No. Guild funds were originally meant for staff of guild businesses, but IKK classic is now listed as open nationwide to everyone in compulsory or voluntary statutory insurance. Whether you work in an office, in care or on a building site makes no difference to being accepted.` },
@@ -79,7 +79,7 @@ ${h.table(['Mitglied', 'Grundlage', 'Eigener Beitrag im Monat'], [
 <h2>From guild business to open fund</h2>
 <p>Guild funds are a type of fund of their own, alongside the AOKs, company funds and substitute funds. They began with the craft guilds, but for the big IKKs the tie to a business is long gone: IKK classic accepts anyone, in whichever state they live. An employee in a craft business can therefore choose freely among all open funds, and the business has no say. The guild funds differ clearly on price among themselves, as the table shows for an employee on ${h.eur(BEISPIEL.lohn)} gross.</p>
 ${h.table(['Guild fund', 'Additional rate', 'You pay a month', 'vs IKK classic a year'], ikks.map((x) => [x.k.id === ID ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === ID ? '·' : `${x.lohn > me.lohn ? '+' : '−'}${h.eur(Math.abs(j(x)))}`]), 'Every IKK in the list, one child, 2026', ['l', 'r', 'r', 'r'])}
-<h2>Contributions for the self-employed and employees</h2>
+<h2>IKK classic contributions for the self-employed and employees</h2>
 ${h.table(['Member', 'Base', 'Own contribution a month'], [
   ['Self-employed, minimum base, no sick pay', h.eur(w.mindestFreiwillig, 2), h.eur(minSelbst)],
   ['Self-employed, no sick pay', h.eur(BEISPIEL.gewinn), h.eur(p.selbst)],

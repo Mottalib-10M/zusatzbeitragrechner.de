@@ -48,7 +48,7 @@ export default defineGuide({
     title: 'Zusatzbeitrag Krankenkassen Liste 2027: alle Kassen, täglich',
     description: `Liste der Zusatzbeiträge aller gesetzlichen Krankenkassen 2026/2027, von ${DE.pk(st.min)} bis ${DE.pk(st.max)}: nach Bundesland und Kassenart filtern, Ihr Beitrag in Euro.`,
     h1: 'Zusatzbeitrag aller Krankenkassen: die vollständige Liste',
-    intro: `${alle.length} Kassen stehen in mindestens einem Land jedem offen, von ${DE.pk(st.min)} bis ${DE.pk(st.max)}; ${unter} liegen unter dem amtlichen Durchschnitt von ${DE.pz(w.zb_durchschnitt)}.`,
+    intro: `${alle.length} Krankenkassen stehen in mindestens einem Land jedem offen, ihr Zusatzbeitrag reicht von ${DE.pk(st.min)} bis ${DE.pk(st.max)}; ${unter} liegen unter dem amtlichen Durchschnitt von ${DE.pz(w.zb_durchschnitt)}.`,
     resume: `Der GKV-Spitzenverband muss die Zusatzbeitragssätze aller gesetzlichen Krankenkassen laufend im Internet veröffentlichen (§ 242 Abs. 5 SGB V). Diese Liste lesen wir jeden Tag. Stand ${displayDate(STAND, 'de-DE')}: ${mitSatz.length} Kassen erheben einen Zusatzbeitrag, ${bund.length} davon sind bundesweit geöffnet, ${regional.length} nur in einzelnen Ländern und ${betrieb.length} nur für die Beschäftigten ihres Trägerunternehmens. Unter den ${alle.length} frei wählbaren Kassen reicht der Satz von ${DE.pk(st.min)} bis ${DE.pk(st.max)}, der ungewichtete Mittelwert liegt bei ${DE.pz(st.mittel)}, der Median bei ${DE.pz(st.median)}; der amtliche durchschnittliche Zusatzbeitragssatz für 2026 beträgt ${DE.pz(w.zb_durchschnitt)}. Die Tabelle unten zeigt jede Kasse mit dem Beitrag, den Beschäftigte mit Ihrem Bruttolohn dort zahlen. Wichtig für den Jahreswechsel: Die amtliche Liste zeigt einen neuen Satz erst ab dem Tag, an dem er gilt, eine Erhöhung zum Januar also erst am 1. Januar.`,
     faqs: [
       { q: 'Warum stehen manche Betriebskrankenkassen nicht in der Rangliste?', a: `Weil ${betrieb.length} Betriebskrankenkassen ihre Satzung nicht geöffnet haben: Sie nehmen nur Beschäftigte ihres Trägerunternehmens auf, oft auch deren Angehörige. In der Liste lassen sie sich mit dem Filter einblenden. Arbeiten Sie dort, kann eine solche Kasse günstig sein; für alle anderen ist sie nicht wählbar.` },
@@ -66,7 +66,7 @@ ${h.table(['Kassenart', 'Kassen mit Satz', 'niedrigster', 'höchster'], proArt.m
 <p>Die Sozialversicherung für Landwirtschaft, Forsten und Gartenbau (SVLFG) erhebt als landwirtschaftliche Krankenkasse keinen Zusatzbeitrag und versichert nur Menschen aus der Landwirtschaft; sie fehlt deshalb in den Zählungen. Für alle anderen gilt: Der Zusatzbeitrag ist der einzige Teil des Beitrags, der sich zwischen den Kassen unterscheidet. Allgemeiner Satz (${h.pz(w.kv_allgemein)}), Beitragsbemessungsgrenze und Pflegebeitrag sind überall gleich.</p>
 <h2>Änderungen seit Beginn der Aufzeichnung</h2>
 ${ereignisTabelle(h, 'de')}
-<h2>So lesen Sie die Tabelle</h2>
+<h2>So lesen Sie die Liste der Krankenkassen</h2>
 <p>Die Spalte „Ihr Beitrag“ rechnet mit dem Bruttolohn im Feld oben, als Beschäftigter mit einem Kind, Kranken- und Pflegeversicherung zusammen; für Rente, Selbstständigkeit oder Studium nutzen Sie den ${h.a('home', 'Beitragsrechner')}. Die Reihenfolge ergibt sich allein aus dem Satz, nicht aus Leistungen oder Service. Wer wechseln will, findet die Fristen im ${h.a('krankenkasse-wechseln', 'Wechsel-Rechner')}. Haben zwei Kassen denselben Satz, teilen sie sich den Rang.</p>`,
   },
   en: {
@@ -76,7 +76,7 @@ ${ereignisTabelle(h, 'de')}
     title: 'Additional Contribution List 2027: Every German Health Fund',
     description: `List of every German statutory health fund’s additional rate for 2026/2027, from ${EN.pk(st.min)} to ${EN.pk(st.max)}: filter by state and fund type, see your own cost in euros.`,
     h1: 'Additional contribution of every health fund: the full list',
-    intro: `${alle.length} funds are open to anyone in at least one state, from ${EN.pk(st.min)} to ${EN.pk(st.max)}; ${unter} are below the official average of ${EN.pz(w.zb_durchschnitt)}.`,
+    intro: `${alle.length} funds are open to anyone in at least one state, with additional contributions from ${EN.pk(st.min)} to ${EN.pk(st.max)}; ${unter} are below the official average of ${EN.pz(w.zb_durchschnitt)}.`,
     resume: `The GKV-Spitzenverband, the umbrella body of Germany’s statutory health funds, must keep the additional contribution rates (Zusatzbeitrag) of all funds published online (section 242(5) of Book V of the Social Code). We read that list every day. As of ${displayDate(STAND, 'en-GB')}: ${mitSatz.length} funds charge an additional rate, ${bund.length} of them open nationwide, ${regional.length} only in particular states and ${betrieb.length} only to the staff of their sponsoring company. Among the ${alle.length} funds open to the public, rates run from ${EN.pk(st.min)} to ${EN.pk(st.max)}; the unweighted mean is ${EN.pz(st.mittel)} and the median ${EN.pz(st.median)}, against an official average additional rate of ${EN.pz(w.zb_durchschnitt)} for 2026. The table below shows each fund with what an employee on your gross pay would pay there. One point for the turn of the year: the official list shows a new rate only from the day it applies, so a rise in January appears on 1 January.`,
     faqs: [
       { q: 'Why are some company funds missing from the ranking?', a: `Because ${betrieb.length} company funds (Betriebskrankenkassen) have not opened their statutes: they take only staff of their sponsoring company, often relatives too. You can show them in the list with the filter. If you work there, such a fund may be cheap; for everyone else it is not an option.` },
@@ -94,7 +94,7 @@ ${h.table(['Type', 'Funds with a rate', 'lowest', 'highest'], proArt.map((x) => 
 <p>The social insurance for agriculture, forestry and horticulture (SVLFG) charges no additional rate and only covers people working in farming; it is left out of the counts. For everyone else the additional rate is the only part of the contribution that differs between funds. The general rate (${h.pz(w.kv_allgemein)}), the contribution ceiling and the care contribution are the same everywhere.</p>
 <h2>Changes since recording began</h2>
 ${ereignisTabelle(h, 'en')}
-<h2>How to read the table</h2>
+<h2>How to read the additional contribution list</h2>
 <p>The “you pay” column uses the gross pay in the field above, as an employee with one child, health and care insurance together; for a pension, self-employment or studies use the ${h.a('home', 'contribution calculator')}. The order comes from the rate alone, not from benefits or service. If you want to switch, the ${h.a('krankenkasse-wechseln', 'switching calculator')} gives the deadlines.</p>`,
   },
 });

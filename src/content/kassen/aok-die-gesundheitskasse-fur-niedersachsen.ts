@@ -68,7 +68,7 @@ ${h.table(['AOK', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber AOK Niede
     title: 'AOK Niedersachsen Additional Contribution 2027: Families',
     description: `AOK Niedersachsen additional rate in 2026: ${EN.pk(p.zb)}. Monthly cost with no, one, three or five children, the gap to AOK Bremen and other funds in Lower Saxony.`,
     h1: 'AOK Niedersachsen: additional rate and cost by family situation',
-    intro: `AOK Niedersachsen charges ${EN.pk(p.zb)}; with three children under 25 you pay ${EN.eur(Math.round((eins - drei) * 12))} a year less than with one.`,
+    intro: `AOK Niedersachsen charges an additional contribution of ${EN.pk(p.zb)}; with three children under 25 you pay ${EN.eur(Math.round((eins - drei) * 12))} a year less than with one.`,
     resume: `AOK Niedersachsen, officially “AOK - Die Gesundheitskasse für Niedersachsen”, is listed by the GKV-Spitzenverband as open in Lower Saxony only and charges an additional contribution (Zusatzbeitrag) of ${EN.pk(p.zb)}. That puts it ${ordEn(aokPlatz)} among the ${aoks.length} regional AOK funds${gleich.length ? `, level with ${gleich.map((k) => k.kurz).join(' and ')}` : ''}. Anyone living or working between the Emsland and the Harz pays ${EN.eur(eins)} a month for health and care insurance on ${EN.eur(BEISPIEL.lohn)} gross with one child. The number of children moves the amount more than some choices of fund: childless members aged 23 and over pay ${EN.eur(ohne)}, parents of three children under 25 only ${EN.eur(drei)}, because a care discount applies from the second child. The city-state AOK in Bremen charges ${EN.pk(hb.k.zb!)}, which at that pay is ${EN.eur(Math.abs(vsHb))} a year ${vsHb > 0 ? 'more' : 'less'}. Among the ${rNI.n} funds open in Lower Saxony, the AOK ranks ${rNI.rang}.`,
     faqs: [
       { q: 'How much less do I pay at AOK Niedersachsen with several children?', a: `From the second child under 25 your care share falls by ${EN.pz(w.pv_abschlag_kind)} per child, up to the fifth. On ${EN.eur(BEISPIEL.lohn)} gross you pay ${EN.eur(eins)} with one child, ${EN.eur(drei)} with three and ${EN.eur(fuenf)} with five each month. The discount is the same at every fund; the children must be proven to whoever pays in your contributions.` },
@@ -77,7 +77,7 @@ ${h.table(['AOK', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber AOK Niede
       { q: 'What do childless AOK Niedersachsen members pay?', a: `From your 23rd birthday a ${EN.pz(w.pv_kinderlos)} care surcharge applies, paid by you alone. On ${EN.eur(BEISPIEL.lohn)} gross you then pay ${EN.eur(ohne)} a month instead of ${EN.eur(eins)}. Parents whose children are over 25 are not childless and do not pay the surcharge.` },
     ],
     body: (h) => `
-<h2>Family and fund: what really moves the contribution</h2>
+<h2>Family and fund: what really moves the AOK Niedersachsen contribution</h2>
 <p>At AOK Niedersachsen, as at every fund, the care share depends on whether you are a parent. For families in Lower Saxony a third child therefore matters more than switching to a cheaper fund, and childless members pay more every year wherever they are insured. The table shows your own share on ${h.eur(BEISPIEL.lohn)} gross.</p>
 ${h.table(['Family situation', 'You pay a month', 'a year'], [
   ['childless, 23 or over', h.eur(ohne), h.eur(ohne * 12)],

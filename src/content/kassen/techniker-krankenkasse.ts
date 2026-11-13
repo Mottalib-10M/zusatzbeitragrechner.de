@@ -36,7 +36,7 @@ export default defineGuide({
       { q: 'Was zahlen Rentner und Studierende bei der TK?', a: `Rentner mit ${DE.eur(BEISPIEL.rente)} gesetzlicher Rente zahlen ${DE.eur(p.rente)} im Monat (halber Krankenversicherungssatz, Pflege voll), Studierende ${DE.eur(p.student)} auf den gesetzlich festen BAföG-Bedarf von ${DE.eur(w.bafoeg_bedarf)}. Freiwillig versicherte Selbstständige mit ${DE.eur(BEISPIEL.gewinn)} Gewinn zahlen ${DE.eur(p.selbst)}, weil kein Arbeitgeber die Hälfte trägt.` },
     ],
     body: (h) => `
-<h2>Die TK unter den großen Ersatzkassen</h2>
+<h2>Der TK-Zusatzbeitrag unter den großen Ersatzkassen</h2>
 <p>${guenstigerEk.length === 0 ? 'Unter den sechs großen Ersatzkassen hat die TK den niedrigsten Satz.' : `Günstiger als die TK ${guenstigerEk.length === 1 ? 'ist unter den sechs großen Ersatzkassen nur' : 'sind unter den sechs großen Ersatzkassen'} ${guenstigerEk.map((x) => x.k.kurz).join(' und ')}.`} Ersatzkassen sind traditionell bundesweit geöffnet; anders als eine AOK oder eine regionale Betriebskrankenkasse können Sie die TK also wählen, egal in welchem Land Sie wohnen oder arbeiten. Die Tabelle rechnet mit ${h.eur(BEISPIEL.lohn)} brutto und einem Kind, Ihr Anteil an Kranken- und Pflegeversicherung.</p>
 ${h.table(['Kasse', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber TK im Jahr'], ek.map((x) => [x.k.id === 'techniker-krankenkasse' ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === 'techniker-krankenkasse' ? '·' : `${x.lohn > p.lohn ? '+' : '−'}${h.eur(Math.abs(Math.round((x.lohn - p.lohn) * 12)))}`]), 'Liste des GKV-Spitzenverbands, Beträge mit dem Rechner oben', ['l', 'r', 'r', 'r'])}
 <h2>Was Sie bei der TK im Monat zahlen</h2>
@@ -68,7 +68,7 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
       { q: 'What do pensioners and students pay at TK?', a: `Pensioners with a ${EN.eur(BEISPIEL.rente)} state pension pay ${EN.eur(p.rente)} a month (half the health rate, care insurance in full); students pay ${EN.eur(p.student)}, based on the statutory BAföG need rate of ${EN.eur(w.bafoeg_bedarf)}. Self-employed voluntary members with ${EN.eur(BEISPIEL.gewinn)} profit pay ${EN.eur(p.selbst)}, because no employer pays half.` },
     ],
     body: (h) => `
-<h2>TK among the big substitute funds</h2>
+<h2>The TK additional contribution among the big substitute funds</h2>
 <p>${guenstigerEk.length === 0 ? 'Of the six big substitute funds, TK has the lowest rate.' : `Of the six big substitute funds, only ${guenstigerEk.map((x) => x.k.kurz).join(' and ')} ${guenstigerEk.length === 1 ? 'is' : 'are'} cheaper than TK.`} Substitute funds have always been open nationwide, so unlike an AOK or a regional company fund you can join TK wherever you live or work. The table uses ${h.eur(BEISPIEL.lohn)} gross and one child, your share of health and care insurance.</p>
 ${h.table(['Fund', 'Additional rate', 'You pay a month', 'vs TK a year'], ek.map((x) => [x.k.id === 'techniker-krankenkasse' ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === 'techniker-krankenkasse' ? '·' : `${x.lohn > p.lohn ? '+' : '−'}${h.eur(Math.abs(Math.round((x.lohn - p.lohn) * 12)))}`]), 'GKV-Spitzenverband list, amounts from the calculator above', ['l', 'r', 'r', 'r'])}
 <h2>What you pay at TK a month</h2>

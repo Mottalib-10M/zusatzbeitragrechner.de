@@ -65,7 +65,7 @@ ${h.table(['Fall', 'Bemessung', 'Ihr Anteil im Monat'], [
     title: 'AOK Bayern Additional Contribution 2027: Cost and Ranking',
     description: `AOK Bayern additional rate in 2026: ${EN.pk(p.zb)}. What members in Bavaria pay a month and how the fund ranks among all AOKs and funds open to Bavarian residents.`,
     h1: 'AOK Bayern: additional rate and cost in euros',
-    intro: `AOK Bayern charges ${EN.pk(p.zb)}; of the ${aoks.length} regional AOK funds, it has the ${ordEn(aokPlatz)} lowest rate.`,
+    intro: `AOK Bayern charges an additional contribution of ${EN.pk(p.zb)}; of the ${aoks.length} regional AOK funds, it has the ${ordEn(aokPlatz)} lowest rate.`,
     resume: `AOK Bayern is Bavaria’s regional health fund (Allgemeine Ortskrankenkasse), and the GKV-Spitzenverband list shows it open in Bavaria only: you can join if you live or work there. Its additional contribution (Zusatzbeitrag) is ${EN.pk(p.zb)}, making ${EN.pz(w.kv_allgemein + p.zb)} of gross pay up to the ceiling together with the general rate. That puts it ${ordEn(aokPlatz)} cheapest of the ${aoks.length} AOKs in Germany, and rank ${by.rang} of the ${by.n} funds open to anyone in Bavaria. An employee earning ${EN.eur(BEISPIEL.lohn)} gross with one child pays ${EN.eur(p.lohn)} a month for health and care insurance, ${EN.eur(Math.abs(p.proJahrVsDurchschnitt))} a year ${p.unterDurchschnitt ? 'less' : 'more'} than at the official average rate of ${EN.pz(w.zb_durchschnitt)}. The cheapest fund open in Bavaria, ${p.billigste.kurz}, costs ${EN.eur(p.proJahrVsBilligste)} a year less at that pay. If you leave Bavaria and no longer work there, you cannot newly join AOK Bayern, but you remain a member until you switch.`,
     faqs: [
       { q: 'Who can join AOK Bayern?', a: `Anyone subject to compulsory insurance, or insured voluntarily, who lives or is employed in Bavaria; that is the opening the GKV-Spitzenverband list records for AOK Bayern. Someone living in Ulm and working in Neu-Ulm can therefore choose it. The fund may not turn you down once either condition is met (section 175(1) SGB V).` },
@@ -77,7 +77,7 @@ ${h.table(['Fall', 'Bemessung', 'Ihr Anteil im Monat'], [
 <h2>One fund for one state: what it means for members</h2>
 <p>The eleven regional AOK funds are organised by territory; the Bavarian one covers exactly one state and sets its additional rate from the income and spending of its Bavarian members. Ranking ${ordEn(aokPlatz)} of ${aoks.length} AOKs at ${h.pk(p.zb)} is therefore a Bavarian figure with little bearing on the AOK next door. For cross-border commuters that is useful: work in Bavaria and live across the state line, and you can choose between two regional funds and take the cheaper one.</p>
 ${h.table(['AOK', 'Additional rate', 'You pay a month', 'vs AOK Bayern a year'], tabelle.map((x) => [x.k.id === ID ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === ID ? '·' : `${x.lohn > p.lohn ? '+' : '−'}${h.eur(Math.abs(d(x)))}`]), `Neighbouring AOKs, ${h.eur(BEISPIEL.lohn)} gross, one child, 2026`, ['l', 'r', 'r', 'r'])}
-<h2>AOK Bayern cost in typical cases</h2>
+<h2>AOK Bayern contribution in typical cases</h2>
 ${h.table(['Case', 'Base', 'Your share a month'], [
   ['Employed', h.eur(BEISPIEL.lohnNiedrig), h.eur(p.lohnNiedrig)],
   ['Employed', h.eur(BEISPIEL.lohn), h.eur(p.lohn)],

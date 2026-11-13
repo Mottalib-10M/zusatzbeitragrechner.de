@@ -76,7 +76,7 @@ ${h.table(['Lage', 'Grundlage', 'Ihr Anteil im Monat'], [
 <h2>Where BARMER sits among the substitute funds</h2>
 <p>Substitute funds such as BARMER, TK, DAK-Gesundheit and hkk were once reserved for salaried staff in certain trades; today anyone subject to compulsory insurance can join them, in any state. Because benefits are largely fixed by law, the price differs almost only through the additional rate. At ${h.pk(p.zb)} BARMER sits in the middle of the list: ${p.rangBund - 1} open funds charge less, ${p.nBund - p.rangBund} the same or more. If your employer has its own company fund (Betriebskrankenkasse), check that too; it is missing from the public ranking. Conversely, a dearer fund is not necessarily a bad deal if its statutes include benefits you really use. The additional rate is simply the part of the price that can be compared in euros.</p>
 ${h.table(['Fund', 'Additional rate', 'You pay a month', 'vs BARMER a year'], peers.map((x) => [x.k.id === 'barmer' ? `<strong>${x.k.kurz}</strong>` : kLink(h, x.k), h.pk(x.k.zb!), h.eur(x.lohn), x.k.id === 'barmer' ? '·' : `${x.lohn > p.lohn ? '+' : '−'}${h.eur(Math.abs(Math.round((x.lohn - p.lohn) * 12)))}`]), `${h.eur(BEISPIEL.lohn)} gross, one child, 2026`, ['l', 'r', 'r', 'r'])}
-<h2>BARMER cost by situation</h2>
+<h2>BARMER contribution by situation</h2>
 ${h.table(['Situation', 'Base', 'Your share a month'], [
   ['Employed', h.eur(BEISPIEL.lohnNiedrig), h.eur(p.lohnNiedrig)],
   ['Employed', h.eur(BEISPIEL.lohn), h.eur(p.lohn)],

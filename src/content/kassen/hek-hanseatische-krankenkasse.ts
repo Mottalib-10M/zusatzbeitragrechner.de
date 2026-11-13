@@ -101,7 +101,7 @@ ${h.table(['Kasse', 'Zusatzbeitrag', 'Ihr Beitrag im Monat', 'gegenüber HEK im 
       { q: 'What can HEK members expect for 2027?', a: `HEK’s board sets its 2027 rate itself, usually in December. The official estimating group arrived at an average of ${EN.pz(w27.zb_durchschnitt)} for 2027, and the Federal Health Ministry set it at that level on 30 October 2026. If HEK’s rate rises, members can switch under the special termination right.` },
     ],
     body: (h) => `
-<h2>HEK at a glance</h2>
+<h2>HEK health insurance at a glance</h2>
 ${h.table(['', 'HEK'], [
   ['Type of fund', 'substitute fund, based in Hamburg'],
   ['Additional rate 2026', h.pk(p.zb)],
