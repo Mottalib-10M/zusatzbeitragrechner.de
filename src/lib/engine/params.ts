@@ -1,4 +1,4 @@
-/** Rechtswerte 2026 und 2027 (vorläufig) aus params-2026.json. Jede Zahl im Rechner und im Text kommt von hier. */
+/** Rechtswerte 2026 und 2027 (Rechengrößen beschlossen, Faktor F vorläufig) aus params-2026.json. Jede Zahl im Rechner und im Text kommt von hier. */
 import raw from '../../data/params-2026.json';
 
 export type Jahr = 2026 | 2027;

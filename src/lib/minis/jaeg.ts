@@ -16,7 +16,7 @@ export default (l: L) => ({
         [T(l, `Grenze 2027 (${eur(b, l)})`, `Threshold 2027 (${eur(b, l)})`), st(b)],
         [T(l, 'Abstand zur Grenze 2027', 'Gap to the 2027 threshold'), eur(Math.abs(j - b), l)],
       ] as Rows,
-      note: T(l, 'Die Pflicht endet nur, wenn das Entgelt auch die Grenze des Folgejahres übersteigt (§ 6 Abs. 4 SGB V). Grenze 2027 vorläufig.', 'Compulsory cover ends only if pay also exceeds the next year’s threshold (section 6(4) SGB V). 2027 threshold provisional.'),
+      note: T(l, 'Die Pflicht endet nur, wenn das Entgelt auch die Grenze des Folgejahres übersteigt (§ 6 Abs. 4 SGB V). Grenze 2027 vom Bundesrat am 20. November 2026 gebilligt.', 'Compulsory cover ends only if pay also exceeds the next year’s threshold (section 6(4) SGB V). 2027 threshold approved by the Bundesrat on 20 November 2026.'),
     };
   },
 });

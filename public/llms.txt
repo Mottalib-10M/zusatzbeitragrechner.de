@@ -1,6 +1,6 @@
 # Zusatzbeitragrechner
 
-> Unabhängige Seite von Radif Partners auf Deutsch und Englisch zur gesetzlichen Krankenversicherung: Zusatzbeiträge aller Krankenkassen, täglich aus der Liste des GKV-Spitzenverbands (§ 242 Abs. 5 SGB V) gelesen, mit Rangliste je Bundesland, Monatsbeitrag in Euro für Beschäftigte (mit Übergangsbereich und Sachsen-Regel), Rentner (mit Betriebsrente), freiwillig versicherte Selbstständige und Studierende, Rechengrößen 2026 und vorläufig 2027 (Beitragsbemessungsgrenze 6.375 € nach dem GKV-Beitragssatzstabilisierungsgesetz), Wechselfristen und Sonderkündigungsrecht nach § 175 Abs. 4 SGB V, Familienversicherung und Ehegattenzuschlag ab 2028.
+> Unabhängige Seite von Radif Partners auf Deutsch und Englisch zur gesetzlichen Krankenversicherung: Zusatzbeiträge aller Krankenkassen, täglich aus der Liste des GKV-Spitzenverbands (§ 242 Abs. 5 SGB V) gelesen, mit Rangliste je Bundesland, Monatsbeitrag in Euro für Beschäftigte (mit Übergangsbereich und Sachsen-Regel), Rentner (mit Betriebsrente), freiwillig versicherte Selbstständige und Studierende, Rechengrößen 2026 und 2027 (Beitragsbemessungsgrenze 6.375 € nach dem GKV-Beitragssatzstabilisierungsgesetz), Wechselfristen und Sonderkündigungsrecht nach § 175 Abs. 4 SGB V, Familienversicherung und Ehegattenzuschlag ab 2028.
 
 Alle Berechnungen laufen im Browser; keine Datenerhebung, keine Telefonnummer, keine Vermittlung, keine Provision. Ergebnisse sind Schätzungen; verbindlich ist die Beitragsberechnung der Krankenkasse.
 

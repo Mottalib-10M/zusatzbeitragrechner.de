@@ -152,7 +152,7 @@ export default function BeitragsRechner({ lang, preset = {}, methodHref, kassenH
           </table>
         </div>
         {liste.length > zeilen && <button type="button" className="no-print mt-3 rounded-md border border-navy-300 px-3 py-1.5 text-sm font-medium text-navy-800 hover:bg-navy-50" onClick={() => setAlle(!alle)}>{alle ? tx(lang, 'Weniger zeigen', 'Show fewer') : tx(lang, `Alle ${liste.length} zeigen`, `Show all ${liste.length}`)}</button>}
-        <p className="mt-2 text-xs text-navy-600">{tx(lang, `Minus = Sie zahlen dort im Jahr weniger als bei ${eigene.kurz}. Betriebskrankenkassen, die nur Beschäftigten ihres Trägers offenstehen, fehlen hier.${w.vorlaeufig ? ' 2027: Rechengrößen vorläufig, Kassensätze von heute, bis die Kassen ihre neuen Sätze melden.' : ''}`, `Minus = you pay less a year than at ${eigene.kurz}. Company funds open only to their own staff are left out.${w.vorlaeufig ? ' 2027: provisional thresholds, today’s fund rates until funds report new ones.' : ''}`)}</p>
+        <p className="mt-2 text-xs text-navy-600">{tx(lang, `Minus = Sie zahlen dort im Jahr weniger als bei ${eigene.kurz}. Betriebskrankenkassen, die nur Beschäftigten ihres Trägers offenstehen, fehlen hier.${w.vorlaeufig ? ' 2027: Rechengrößen beschlossen, Kassensätze von heute, bis die Kassen ihre neuen Sätze melden.' : ''}`, `Minus = you pay less a year than at ${eigene.kurz}. Company funds open only to their own staff are left out.${w.vorlaeufig ? ' 2027: adopted thresholds, today’s fund rates until funds report new ones.' : ''}`)}</p>
       </div>
       </div>
     </div>

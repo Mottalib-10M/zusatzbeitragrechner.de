@@ -26,7 +26,7 @@ const h = helpers(lang);
 const path = route('home', lang);
 const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
 const faqs = x.faqs(h);
-const keys: SourceKey[] = ['gkvListe', 'sgb5_241', 'sgb5_242', 'sgb5_242a', 'sgb5_175', 'sgb5_223', 'sgb5_249', 'sgb11_55', 'sgb11_58', 'banzZb2026', 'bmasRg2026', 'bmasRg2027', 'bgblStabG'];
+const keys: SourceKey[] = ['gkvListe', 'sgb5_241', 'sgb5_242', 'sgb5_242a', 'sgb5_175', 'sgb5_223', 'sgb5_249', 'sgb11_55', 'sgb11_58', 'banzZb2026', 'bmasRg2026', 'bmasRg2027', 'brRg2027', 'bgblStabG'];
 const sources = keys.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }));
 const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(faqs, lang)];
 const $ = (n: number, d = 0) => formatMoney(n, d, lang);
@@ -71,7 +71,7 @@ const ab = (k: string) => (kassenSeite(k) ? route(kassenSeite(k)!.id, lang) : un
   </section>
   <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="neu2027" data-chrome>
     <h2 id="neu2027" class="text-2xl font-bold text-navy-900">{de ? 'Rechengrößen 2026 und 2027 nebeneinander' : '2026 and 2027 thresholds side by side'}</h2>
-    <p class="mt-2 text-navy-700">{de ? '2027 nach dem Kabinettsbeschluss vom 7. Oktober 2026 (Bundesrat steht aus) und dem vom Ministerium am 30. Oktober 2026 festgelegten Durchschnittssatz; vorläufig, bis die Verordnung erschienen ist.' : '2027 per the cabinet decision of 7 October 2026 (Bundesrat pending) and the average rate the ministry set on 30 October 2026; provisional until the ordinance is published.'}</p>
+    <p class="mt-2 text-navy-700">{de ? '2027 nach der Rechengrößenverordnung 2027, der der Bundesrat am 20. November 2026 zugestimmt hat, und dem vom Ministerium am 30. Oktober 2026 festgelegten Durchschnittssatz; beides gilt ab dem 1. Januar 2027.' : '2027 per the 2027 reference values ordinance, approved by the Bundesrat on 20 November 2026, and the average rate the ministry set on 30 October 2026; both apply from 1 January 2027.'}</p>
     <dl class="mt-4 grid gap-px overflow-hidden rounded-lg border border-navy-200 bg-navy-200 sm:grid-cols-2 lg:grid-cols-3">
       {vergleich.map((v) => (
         <div class="bg-white p-4">

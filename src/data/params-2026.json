@@ -55,7 +55,7 @@
       "av_satz": 2.6,
       "bafoeg_bedarf": 855,
       "minijob_ag_kv": 17.5,
-      "_quelle": "Kabinettsbeschluss Sozialversicherungsrechengrößen-Verordnung 2027 vom 07.10.2026 (Bundesrat ausstehend): BBG KV 6.375 €, JAEG § 6 Abs. 6 84.150 €, JAEG § 6 Abs. 7 72.900 €, Bezugsgröße 4.130 €; § 223 Abs. 4 SGB V i. d. F. GKV-Beitragssatzstabilisierungsgesetz (BGBl. 2026 I Nr. 228): BBG = JAEG § 6 Abs. 7 + 3.600 €; § 55 Abs. 2 SGB XI: Pflege-BBG = JAEG § 6 Abs. 7 = 72.900 € (der Entwurf des Pflegeneuordnungsgesetzes will sie an die KV-Grenze koppeln, nicht in Kraft); Schätzerkreis vom 14.10.2026: rechnerischer durchschnittlicher Zusatzbeitragssatz 2,9 %; vom BMG am 30.10.2026 auf 2,9 % festgelegt (Pressemitteilung vom 30.10.2026, Bekanntmachung im Bundesanzeiger nach § 242a Abs. 2 SGB V); § 8 Abs. 1a SGB IV mit Mindestlohn 14,60 € ab 1.1.2027 (MiLoV5) = 633 €; § 249b SGB V n. F.: Minijob-Pauschale KV = 14,6 % + 2,9 %; Kinderlosenzuschlag 0,9 % nur im Entwurf PNOG, nicht in Kraft, daher 0,6 %; Faktor F 2027 vorläufig: das BMAS gibt ihn bis 31.12.2026 im Bundesanzeiger bekannt (§ 20 Abs. 2a SGB IV); ab 1.1.2027 lautet der Zähler nicht mehr 28 %, sondern allgemeiner Beitragssatz + durchschnittlicher Zusatzbeitragssatz + Minijob-Pauschale RV nach § 168 Abs. 1 Nr. 1b SGB VI (Art. 2 Nr. 1, Art. 8 Abs. 2 GKV-Beitragssatzstabilisierungsgesetz, BGBl. 2026 I Nr. 228): (14,6 + 2,9 + 15) / (18,6 + 2,6 + 3,6 + 14,6 + 2,9) = 32,5 / 42,3 = 0,7683; RV 18,6 % nach Kabinettsbeschluss vom 07.10.2026, Zusatzbeitrag 2,9 % vom BMG am 30.10.2026 festgelegt",
+      "_quelle": "Sozialversicherungsrechengrößen-Verordnung 2027, Kabinettsbeschluss vom 07.10.2026, vom Bundesrat am 20.11.2026 unverändert gebilligt (Drucksache 576/26 (B); Verkündung im BGBl. ausstehend, Inkrafttreten 01.01.2027): BBG KV 6.375 €, JAEG § 6 Abs. 6 84.150 €, JAEG § 6 Abs. 7 72.900 €, Bezugsgröße 4.130 €; § 223 Abs. 4 SGB V i. d. F. GKV-Beitragssatzstabilisierungsgesetz (BGBl. 2026 I Nr. 228): BBG = JAEG § 6 Abs. 7 + 3.600 €; § 55 Abs. 2 SGB XI: Pflege-BBG = JAEG § 6 Abs. 7 = 72.900 € (der Entwurf des Pflegeneuordnungsgesetzes will sie an die KV-Grenze koppeln, nicht in Kraft); Schätzerkreis vom 14.10.2026: rechnerischer durchschnittlicher Zusatzbeitragssatz 2,9 %; vom BMG am 30.10.2026 auf 2,9 % festgelegt (Pressemitteilung vom 30.10.2026, Bekanntmachung im Bundesanzeiger nach § 242a Abs. 2 SGB V); § 8 Abs. 1a SGB IV mit Mindestlohn 14,60 € ab 1.1.2027 (MiLoV5) = 633 €; § 249b SGB V n. F.: Minijob-Pauschale KV = 14,6 % + 2,9 %; Kinderlosenzuschlag 0,9 % nur im Entwurf PNOG, nicht in Kraft, daher 0,6 %; Faktor F 2027 vorläufig: das BMAS gibt ihn bis 31.12.2026 im Bundesanzeiger bekannt (§ 20 Abs. 2a SGB IV); ab 1.1.2027 lautet der Zähler nicht mehr 28 %, sondern allgemeiner Beitragssatz + durchschnittlicher Zusatzbeitragssatz + Minijob-Pauschale RV nach § 168 Abs. 1 Nr. 1b SGB VI (Art. 2 Nr. 1, Art. 8 Abs. 2 GKV-Beitragssatzstabilisierungsgesetz, BGBl. 2026 I Nr. 228): (14,6 + 2,9 + 15) / (18,6 + 2,6 + 3,6 + 14,6 + 2,9) = 32,5 / 42,3 = 0,7683; RV 18,6 % nach Kabinettsbeschluss vom 07.10.2026, Zusatzbeitrag 2,9 % vom BMG am 30.10.2026 festgelegt",
       "rv_minijob_pauschale": 15,
       "_faktor_f_status": "vorlaeufig"
     }
@@ -121,8 +121,15 @@
     "bmasRg2027": {
       "url": "https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/sozialversicherungs-rechengroessenverordnung-2027.html",
       "label": {
-        "de": "BMAS: Sozialversicherungs-Rechengrößenverordnung 2027 (Kabinettsbeschluss vom 7. Oktober 2026)",
-        "en": "Labour Ministry: social insurance reference values 2027 (cabinet decision of 7 October 2026)"
+        "de": "BMAS: Sozialversicherungs-Rechengrößenverordnung 2027 (Kabinettsbeschluss vom 7. Oktober 2026, Zustimmung des Bundesrats am 20. November 2026)",
+        "en": "Labour Ministry: social insurance reference values 2027 (cabinet decision of 7 October 2026, approved by the Bundesrat on 20 November 2026)"
+      }
+    },
+    "brRg2027": {
+      "url": "https://www.bundesrat.de/SharedDocs/drucksachen/2026/0501-0600/576-26%28B%29.pdf?__blob=publicationFile&v=1",
+      "label": {
+        "de": "Bundesrat: Beschluss zur Sozialversicherungsrechengrößen-Verordnung 2027 vom 20. November 2026 (Drucksache 576/26 B)",
+        "en": "Bundesrat: decision approving the 2027 social insurance reference values ordinance, 20 November 2026 (printed paper 576/26 B)"
       }
     },
     "bgblStabG": {

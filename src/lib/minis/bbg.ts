@@ -18,7 +18,7 @@ export default (l: L) => ({
         [T(l, 'Ihr Anteil im Monat 2027', 'Your monthly share 2027'), eur(n.selbst, l)],
         [T(l, 'Beitragspflichtig KV / PV 2027', 'Contributory health / care 2027'), `${eur(n.basisKv, l)} / ${eur(n.basisPv, l)}`],
       ] as Rows,
-      note: T(l, 'Durchschnittlicher Zusatzbeitrag, ein Kind; 2027 vorläufig.', 'Average additional rate, one child; 2027 provisional.'),
+      note: T(l, 'Durchschnittlicher Zusatzbeitrag, ein Kind; 2027 mit den beschlossenen Rechengrößen und dem festgelegten Durchschnittssatz.', 'Average additional rate, one child; 2027 uses the adopted thresholds and the set average rate.'),
     };
   },
 });
